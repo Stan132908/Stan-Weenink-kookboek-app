@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Kookboek App</title>
+</head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+<body>
+<p id="text">Klik hier en vul je ingrediënten in.</p>
+<button id="clickButton">klik hier</button>
+
+<script>
+var button = document.getElementById("clickButton");
+var text = document.getElementById("text");
+
+button.addEventListener('click', ingrediënten, false);
+
+function ingrediënten() {
+    var ingr1 = prompt("typ uw eerste ingrediënt.");
+    window.alert("Dit is uw eerste ingrediënt: "+ingr1);
+    var ingr2 = prompt("typ uw tweede ingrediënt.");
+    window.alert("Dit is uw tweede ingrediënt: "+ingr2);
+    var bereiding = prompt("Vul uw bereidingswijze in. Kies uit: koken, braden of bakken.");
+    window.alert("U heeft gekozen voor: "+bereiding);
+    var tijdsduur = prompt("Vul nu het aantal minuten in dat nodig is om dit recept te bereiden.");
+    window.alert("U heeft gekozen voor "+tijdsduur +" minuten.");
+    window.alert("Uw ingrediënten zijn "+ingr1 +" en "+ingr2+". Uw berdeidingswijze is "+bereiding+" en uw bereidingstijd is "+tijdsduur+" minuten.");
+    window.alert("Oke, nu gaan we beginnen met het bereiden van het gerecht, dat belooft wat lekkers te gaan worden!");
+    window.alert("Stap 1: mix de ingrediënten "+ingr1 +" en "+ingr2 +" goed door elkaar.");
+    window.alert("Stap 2: ga nu de ingrediënten "+tijdsduur+" minuten "+bereiding+".");
+    window.alert("Stap 3: zodra het "+bereiding+" klaar is laat u het gerecht 15 minuten afkoelen.");
+    window.alert("Uw gerecht is klaar, eetsmakelijk!");
+    var rate = prompt("Zou u onze app misschien willen beoordelen? Vul een cijfer in tussen de 1 en de 10 waarbij 1 zeer ontevreden en 10 zeer tevreden is.");
+    if(rate>6){
+        window.alert("U heeft onze app een "+rate+" gegeven, bedankt!");
+    }
+    else{
+        window.alert("U heeft onze app een "+rate+" gegeven, we zullen proberen onze app te verbeteren. Bedankt voor de feedback!");
+    }
+}
+</script>
+</body>
